@@ -1,0 +1,15 @@
+
+@MEDIA (MIN-WIDTH: 768PX) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+    height: 100%;
+    flex-direction: column;
+}

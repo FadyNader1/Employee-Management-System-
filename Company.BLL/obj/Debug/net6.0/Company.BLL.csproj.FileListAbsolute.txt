@@ -1,0 +1,17 @@
+F:\ProjectsBackend\System Management\Company.BLL\bin\Debug\net6.0\Company.BLL.deps.json
+F:\ProjectsBackend\System Management\Company.BLL\bin\Debug\net6.0\Company.BLL.dll
+F:\ProjectsBackend\System Management\Company.BLL\bin\Debug\net6.0\Company.BLL.pdb
+F:\ProjectsBackend\System Management\Company.BLL\bin\Debug\net6.0\Company.DAL.dll
+F:\ProjectsBackend\System Management\Company.BLL\bin\Debug\net6.0\Company.DAL.pdb
+F:\ProjectsBackend\System Management\Company.BLL\obj\Debug\net6.0\Company.BLL.csproj.AssemblyReference.cache
+F:\ProjectsBackend\System Management\Company.BLL\obj\Debug\net6.0\Company.BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\ProjectsBackend\System Management\Company.BLL\obj\Debug\net6.0\Company.BLL.AssemblyInfoInputs.cache
+F:\ProjectsBackend\System Management\Company.BLL\obj\Debug\net6.0\Company.BLL.AssemblyInfo.cs
+F:\ProjectsBackend\System Management\Company.BLL\obj\Debug\net6.0\Company.BLL.csproj.CoreCompileInputs.cache
+F:\ProjectsBackend\System Management\Company.BLL\obj\Debug\net6.0\Company..E6BDEF00.Up2Date
+F:\ProjectsBackend\System Management\Company.BLL\obj\Debug\net6.0\Company.BLL.dll
+F:\ProjectsBackend\System Management\Company.BLL\obj\Debug\net6.0\refint\Company.BLL.dll
+F:\ProjectsBackend\System Management\Company.BLL\obj\Debug\net6.0\Company.BLL.pdb
+F:\ProjectsBackend\System Management\Company.BLL\obj\Debug\net6.0\ref\Company.BLL.dll
+F:\ProjectsBackend\System Management\Company.BLL\bin\Debug\net6.0\Company.BLL.runtimeconfig.json
+F:\ProjectsBackend\System Management\Company.BLL\obj\Debug\net6.0\Company.BLL.genruntimeconfig.cache

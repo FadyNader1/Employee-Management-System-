@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@model EmployeeViewModel
+
+<div class="bg-danger text-white p-2 shadow-sm">
+    <h2 class="text-center m-0">Are You Sure You Want To Delete This Employee?</h2>
+</div>
+
+<div class="d-flex justify-content-center align-items-start min-vh-100 pt-5">
+    <form class="bg-white p-4 rounded-3 shadow w-50" asp-action="Delete">
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+        <center>
+            <img src="~/files/images/@Model.Image" alt="not found image" width="150" height="150" class="rounded-circle " style="margin-bottom:20px;" />
+        </center>
+
+        <div class="row">
+            <div class="mb-3 col-md-6">
+                <label asp-for="FirstName" class="form-label fw-bold">First Name</label>
+                <input asp-for="FirstName" class="form-control" type="text" readonly />
+                <span asp-validation-for="FirstName" class="text-danger small"></span>
+            </div>
+            <div class="mb-3 col-md-6">
+                <label asp-for="LastName" class="form-label fw-bold">Last Name</label>
+                <input asp-for="LastName" class="form-control" type="text" readonly />
+                <span asp-validation-for="LastName" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label asp-for="Age" class="form-label fw-bold">Age</label>
+                <input asp-for="Age" class="form-control" type="number" readonly />
+                <span asp-validation-for="Age" class="text-danger small"></span>
+            </div>
+            <div class="mb-3 col-md-6">
+                <label asp-for="Salary" class="form-label fw-bold">Salary</label>
+                <input asp-for="Salary" class="form-control" type="number" step="0.01" readonly />
+                <span asp-validation-for="Salary" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label asp-for="Address" class="form-label fw-bold">Address</label>
+                <input asp-for="Address" class="form-control" type="text" readonly />
+                <span asp-validation-for="Address" class="text-danger small"></span>
+            </div>
+            <div class="mb-3 col-md-6">
+                <label asp-for="Email" class="form-label fw-bold">Email</label>
+                <input asp-for="Email" class="form-control" type="email" readonly />
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label asp-for="PhoneNumber" class="form-label fw-bold">Phone Number</label>
+                <input asp-for="PhoneNumber" class="form-control" type="tel" readonly />
+                <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
+            </div>
+            <div class="mb-3 col-md-6">
+                <label asp-for="HireDate" class="form-label fw-bold">Hire Date</label>
+                <input asp-for="HireDate" class="form-control" type="date" readonly />
+                <span asp-validation-for="HireDate" class="text-danger small"></span>
+            </div>
+        </div>
+
+
+        <div class="d-flex justify-content-between align-items-center">
+            <button type="submit" class="btn bg-danger text-white shadow">
+                <i class="fas fa-trash me-1"></i>Delete
+            </button>
+
+            <a asp-action="Index" class="btn btn-light fw-bold">
+                <i class="fas fa-arrow-left me-1"></i>Back to list
+            </a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

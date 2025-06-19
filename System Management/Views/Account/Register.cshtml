@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+@model RegisterViewModel
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="login-box w-100" style="max-width: 400px;">
+        <h2 class="text-center mb-4">Register</h2>
+        <form asp-action="Register">
+            <div asp-validation-summary="All"></div>
+             <div class="mb-3">
+                <input asp-for="FName" class="form-control" placeholder="First Name">
+                <span asp-validation-for="FName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <input asp-for="LNmae"  class="form-control " placeholder="Last Name">
+                <span asp-validation-for="LNmae" class="text-danger"></span>
+
+            </div>
+            <div class="mb-3">
+                <input asp-for="Email" class="form-control" placeholder="Email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+
+            </div>
+            <div class="mb-3">
+                <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number">
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+
+            </div>
+            <div class="mb-3">
+                <input asp-for="Password" class="form-control" placeholder="Password">
+                <span asp-validation-for="Password" class="text-danger"></span>
+
+            </div>
+            <div class="mb-3">
+                <input asp-for="Confirm_Password" class="form-control" placeholder="Confirm Password">
+                <span asp-validation-for="Confirm_Password" class="text-danger"></span>
+
+            </div>
+            <br />
+           
+            <div class="d-grid mb-3">
+                <button type="submit" class="btn login-btn fw-bold text-danger">Register</button>
+            </div>
+            <div class="text-center">
+                Have an account? <a asp-action="Login" >Login</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

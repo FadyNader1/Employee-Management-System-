@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model DepartmentViewModel
+
+<div class="bg-warning text-white p-2 shadow-sm">
+    <h2 class="text-center m-0">Edit Department</h2>
+</div>
+
+<div class="d-flex justify-content-center align-items-start min-vh-100 pt-5">
+    <form class="bg-white p-4 rounded-3 shadow w-50" asp-action="Edit">
+
+        <div asp-validation-summary="All"></div>
+
+        <div class="mb-3">
+            <label asp-for="Code" class="form-label fw-bold">Code</label>
+            <input asp-for="Code" class="form-control" />
+            <span asp-validation-for="Code" class="text-danger small"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Department_Name" class="form-label fw-bold">Name</label>
+            <input asp-for="Department_Name" class="form-control" />
+            <span asp-validation-for="Department_Name" class="text-danger small"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="CreatedDate" class="form-label fw-bold">Date</label>
+            <input asp-for="CreatedDate" class="form-control" />
+            <span asp-validation-for="CreatedDate" class="text-danger small"></span>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <button type="submit" class="btn bg-warning text-white shadow">
+                <i class="fas fa-save me-1"></i>Save
+            </button>
+
+            <a asp-action="Index" class="btn btn-light fw-bold">
+                <i class="fas fa-arrow-left me-1"></i>Back to list
+            </a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IReadOnlyList<DepartmentViewModel>
+
+@if (TempData["res"] is not null)
+{
+    <div class="d-flex justify-content-center mt-3">
+        <div class="bg-white text-dark p-2 rounded shadow-sm w-25 text-center">
+            @TempData["res"]
+        </div>
+    </div>
+}
+@if (User.IsInRole("HR") || User.IsInRole("Admin"))
+{
+    <div class="d-flex justify-content-start mt-3">
+        <a asp-action="Create" class="btn btn-success fw-bold shadow-sm">
+            <i class="fa-solid fa-plus me-1"></i> Create Department
+        </a>
+    </div>
+}
+
+
+<div class="container w-75 mt-2">
+    <form asp-action="Index" method="get" class="d-flex shadow-sm">
+        <input class="form-control me-2" type="search" name="value" placeholder="Search..." aria-label="Search">
+        <button class="btn btn-primary text-white" type="submit">
+            <i class="fas fa-search"></i> Search
+        </button>
+    </form>
+</div>
+
+
+@if (Model.Any())
+{
+    <div class=" text-white text-center py-2 mt-4 shadow-sm rounded" style="background-color:#2C3E50">
+        <h2>All Departments</h2>
+    </div>
+
+    <table class="table table-striped table-hover text-center bg-white mt-3 shadow-sm rounded border border-5">
+        <thead style="background-color: rgba(100, 100, 0, 0.25);">
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Created Date</th>
+                @if (User.IsInRole("HR") || User.IsInRole("Admin"))
+                {
+                    <th class=" text-white" style="background-color:#3498DB;">
+                        <i class="fas fa-eye"></i> Details
+                    </th>
+                    <th class="bg-warning text-dark">
+                        <i class="fas fa-edit"></i> Edit
+                    </th>
+                    <th class="bg-danger text-white">
+                        <i class="fas fa-trash"></i> Delete
+                    </th>
+                }
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.Code</td>
+                    <td>@x.Department_Name</td>
+                    <td>@x.CreatedDate.ToShortDateString()</td>
+                    @if (User.IsInRole("HR") || User.IsInRole("Admin"))
+                    {
+                        <td>
+                            <a asp-action="Details" asp-route-id="@x.Id" class="btn btn-info text-white shadow-sm" style="background-color:#3498DB;">
+                                <i class="fas fa-eye"></i> Details
+                            </a>
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@x.Id" class="btn btn-warning text-dark shadow-sm">
+                                <i class="fas fa-edit"></i> Edit
+                            </a>
+                        </td>
+                        <td>
+                            <a asp-action="Delete" asp-route-id="@x.Id" class="btn btn-danger text-white shadow-sm">
+                                <i class="fas fa-trash"></i> Delete
+                            </a>
+                        </td>
+                    }
+
+                   
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="w-75 mx-auto p-3 mt-5 bg-primary text-white text-center shadow-sm rounded">
+        <h2>No Departments Found</h2>
+    </div>
+}

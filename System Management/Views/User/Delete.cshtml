@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model UserViewModel
+
+<div class="bg-danger text-white p-2 shadow-sm">
+    <h2 class="text-center m-0">Are You Sure You Want To Delete This User?</h2>
+</div>
+
+<div class="d-flex justify-content-center align-items-start min-vh-100 pt-5	">
+    <form class="bg-white p-4 rounded-3 shadow w-50" asp-action="Delete">
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+        <div class="row">
+            <div class="mb-3 col-md-6">
+                <label asp-for="FirstName" class="form-label fw-bold">First Name</label>
+                <input asp-for="FirstName" class="form-control" type="text" readonly />
+                <span asp-validation-for="FirstName" class="text-danger small"></span>
+            </div>
+            <div class="mb-3 col-md-6">
+                <label asp-for="LastName" class="form-label fw-bold">Last Name</label>
+                <input asp-for="LastName" class="form-control" type="text" readonly />
+                <span asp-validation-for="LastName" class="text-danger small"></span>
+            </div>
+
+           
+
+            <div class="mb-3 col-md-6">
+                <label asp-for="Email" class="form-label fw-bold">Email</label>
+                <input asp-for="Email" class="form-control" type="email" readonly />
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label asp-for="PhoneNumber" class="form-label fw-bold">Phone Number</label>
+                <input asp-for="PhoneNumber" class="form-control" type="tel" readonly />
+                <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
+            </div>
+            <div class="mb-3 col-md-6">
+                <label asp-for="Roles" class="form-label fw-bold">Roles</label>
+                <input value="@string.Join(",", Model.Roles)" class="form-control" readonly />
+                <span asp-validation-for="Roles" class="text-danger small"></span>
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <button type="submit" class="btn bg-danger text-white shadow" asp-route-id="@Model.Id">
+                <i class="fas fa-trash me-1"></i>Delete
+            </button>
+
+            <a asp-action="Index" class="btn btn-light fw-bold">
+                <i class="fas fa-arrow-left me-1"></i>Back to list
+            </a>
+        </div>
+    </form>
+</div>
+
+
+
+

@@ -1,0 +1,14 @@
+F:\ProjectsBackend\System Management\Company.DAL\bin\Debug\net6.0\Company.DAL.deps.json
+F:\ProjectsBackend\System Management\Company.DAL\bin\Debug\net6.0\Company.DAL.runtimeconfig.json
+F:\ProjectsBackend\System Management\Company.DAL\bin\Debug\net6.0\Company.DAL.dll
+F:\ProjectsBackend\System Management\Company.DAL\bin\Debug\net6.0\Company.DAL.pdb
+F:\ProjectsBackend\System Management\Company.DAL\obj\Debug\net6.0\Company.DAL.csproj.AssemblyReference.cache
+F:\ProjectsBackend\System Management\Company.DAL\obj\Debug\net6.0\Company.DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\ProjectsBackend\System Management\Company.DAL\obj\Debug\net6.0\Company.DAL.AssemblyInfoInputs.cache
+F:\ProjectsBackend\System Management\Company.DAL\obj\Debug\net6.0\Company.DAL.AssemblyInfo.cs
+F:\ProjectsBackend\System Management\Company.DAL\obj\Debug\net6.0\Company.DAL.csproj.CoreCompileInputs.cache
+F:\ProjectsBackend\System Management\Company.DAL\obj\Debug\net6.0\Company.DAL.dll
+F:\ProjectsBackend\System Management\Company.DAL\obj\Debug\net6.0\refint\Company.DAL.dll
+F:\ProjectsBackend\System Management\Company.DAL\obj\Debug\net6.0\Company.DAL.pdb
+F:\ProjectsBackend\System Management\Company.DAL\obj\Debug\net6.0\Company.DAL.genruntimeconfig.cache
+F:\ProjectsBackend\System Management\Company.DAL\obj\Debug\net6.0\ref\Company.DAL.dll
